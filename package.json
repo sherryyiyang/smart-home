@@ -1,0 +1,12 @@
+{
+  "name": "smart-home-backend",
+  "version": "1.0.0",
+  "description": "Smart Home Control API for E2E testing",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
