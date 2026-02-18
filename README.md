@@ -1,7 +1,7 @@
 Prompt:
 "I need a simple Node.js Express backend for testing my E2E tool.
 
-Requirements:
+** Requirements: **
 
 No Database: Use a global JavaScript object/array to store state in memory.
 
