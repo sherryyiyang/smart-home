@@ -10,11 +10,8 @@ Theme: A 'Smart Home Control' API.
 Endpoints:
 
 GET /health: Returns { "status": "ok", "uptime": 123 }.
-
 GET /devices: Returns a list of devices (Light, Thermostat, Lock) and their current states.
-
 PATCH /devices/:id: Updates the state of a specific device (e.g., toggle 'on' to 'off').
-
 POST /reset: Resets all device states to their default (crucial for E2E test cleanup).
 
 Validation: Include basic error handling (e.g., 404 if device ID doesn't exist).
