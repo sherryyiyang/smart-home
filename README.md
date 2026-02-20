@@ -8,7 +8,6 @@ No Database: Use a global JavaScript object/array to store state in memory.
 Theme: A 'Smart Home Control' API.
 
 Endpoints:
-
 GET /health: Returns { "status": "ok", "uptime": 123 }.
 GET /devices: Returns a list of devices (Light, Thermostat, Lock) and their current states.
 PATCH /devices/:id: Updates the state of a specific device (e.g., toggle 'on' to 'off').
