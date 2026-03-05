@@ -1,0 +1,18 @@
+{
+  "status": "commited",
+  "type": "backend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3000",
+  "backendAuthType": "public",
+  "executionArgs": {
+    "projectName": "smart-home",
+    "projectPath": "/Users/sherry/Projects/smart-home",
+    "testIds": [],
+    "additionalInstruction": "",
+    "envs": {
+      "API_KEY": "sk-user-oKJkiJ328IixeMjlUWt6GLLnKfft3Vy8Rcidj0ZIitRx1Y-Aamd7ujCNOi4jA9j4tqpURbY9zf0bcK2pdY-8SLJA6qyUP_y_VGrciw1pBmy_HLdh0l_9Nyhtr-y7sTBrL_A"
+    }
+  },
+  "serverPort": 60200,
+  "proxy": "http://b7d4bf1e-653c-4696-9380-982ae82a4aa8:WWVU1K3unveMmEZRSexvqMt8c2W8kpR7@tun.testsprite.com:8080"
+}

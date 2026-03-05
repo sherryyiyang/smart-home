@@ -1,0 +1,68 @@
+version: "2"
+type: backend
+tech_stack:
+  - Node.js
+  - Express.js
+  - JavaScript
+features:
+  - name: Health Check API
+    description: Endpoint to check server status and uptime
+    files:
+      - server.js
+    endpoints:
+      - method: GET
+        path: /health
+        description: Returns server health status and uptime in seconds
+        auth_required: false
+        response_schema:
+          "200":
+            status: string
+            uptime: number
+
+  - name: Device Management API
+    description: CRUD operations for smart home devices (lights, thermostats, locks)
+    files:
+      - server.js
+    endpoints:
+      - method: GET
+        path: /devices
+        description: List all smart home devices
+        auth_required: false
+        response_schema:
+          "200": Device[]
+      - method: GET
+        path: /devices/:id
+        description: Get a single device by ID
+        auth_required: false
+        response_schema:
+          "200": Device
+          "404": Device not found error
+      - method: PATCH
+        path: /devices/:id
+        description: Update a device's properties (Light - on/brightness, Thermostat - on/temperature, Lock - locked)
+        auth_required: false
+        request_schema:
+          body:
+            on: boolean
+            brightness: number
+            temperature: number
+            locked: boolean
+        response_schema:
+          "200": Device
+          "400": Invalid fields error
+          "404": Device not found error
+
+  - name: Device Reset API
+    description: Reset all devices to their default state
+    files:
+      - server.js
+    endpoints:
+      - method: POST
+        path: /reset
+        description: Reset all devices to default state
+        auth_required: false
+        response_schema:
+          "200":
+            message: string
+
+known_limitations: []

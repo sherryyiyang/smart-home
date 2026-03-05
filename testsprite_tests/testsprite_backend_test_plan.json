@@ -1,0 +1,52 @@
+[
+  {
+    "id": "TC001",
+    "title": "get health check status and uptime",
+    "description": "Test the GET /health endpoint to verify it returns a 200 status with a JSON body containing status 'ok' and a numeric uptime value representing the server uptime in seconds."
+  },
+  {
+    "id": "TC002",
+    "title": "list all smart home devices",
+    "description": "Test the GET /devices endpoint to ensure it returns a 200 status with a list of all smart home devices including Light, Thermostat, and Lock with their current states."
+  },
+  {
+    "id": "TC003",
+    "title": "get single device by valid id",
+    "description": "Test the GET /devices/:id endpoint with an existing device ID to verify it returns a 200 status and the correct device object."
+  },
+  {
+    "id": "TC004",
+    "title": "get single device by invalid id",
+    "description": "Test the GET /devices/:id endpoint with a non-existent device ID to verify it returns a 404 status with a 'Device not found' error message."
+  },
+  {
+    "id": "TC005",
+    "title": "update device properties with valid data",
+    "description": "Test the PATCH /devices/:id endpoint with valid update fields such as {\"on\":true} for Light, {\"temperature\":72} for Thermostat, and {\"locked\":true} for Lock, verifying a 200 status and the updated device object."
+  },
+  {
+    "id": "TC006",
+    "title": "update device properties with invalid data",
+    "description": "Test the PATCH /devices/:id endpoint with invalid field types such as {\"brightness\":\"high\"} to verify it returns a 400 status with an 'Invalid fields' error message."
+  },
+  {
+    "id": "TC007",
+    "title": "update device with non existent id",
+    "description": "Test the PATCH /devices/:id endpoint with a non-existent device ID to verify it returns a 404 status with a 'Device not found' error message."
+  },
+  {
+    "id": "TC008",
+    "title": "reset all devices to default state",
+    "description": "Test the POST /reset endpoint to verify it resets all devices to their default states and returns a 200 status with a confirmation message."
+  },
+  {
+    "id": "TC009",
+    "title": "reset devices after update",
+    "description": "Test the sequence of updating a device property via PATCH /devices/:id, then calling POST /reset, and finally GET /devices to verify the devices are reset to default states."
+  },
+  {
+    "id": "TC010",
+    "title": "handle internal error on reset endpoint",
+    "description": "Test the POST /reset endpoint behavior when an internal server error occurs, verifying it returns a 500 status with a server error message."
+  }
+]
